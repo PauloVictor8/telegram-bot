@@ -12,4 +12,7 @@ bot.on('message', (msg) => {
     bot.onText(/\/start/, (msg) => {
         bot.sendMessage(chatId, 'Olá, seja bem vindo! Esse é o bot de aviso de entrega mais eficiente do Brasil! Em quê podemos lhe ajudar? /\/Sair/?')
     })
+    if(msg == 'oi');{
+        bot.sendMessage(chatId, "Olá, senhor(a)!")
+    }
 });
