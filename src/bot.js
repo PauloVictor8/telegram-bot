@@ -1,18 +1,10 @@
 require('dotenv').config()
-const TelegramBot = require('node-telegram-bot-api');
+import { Telegraf } from 'telegraf';
 
-const TOKEN = process.env.BOT; // Token do BOT
+const bot = new Telegraf(process.env.BOT);
 
-const bot = new TelegramBot(TOKEN, {polling: true});
+bot.command('start', async (ctx) => {
+    await ctx.telegram.sendMessage(ctx.message.chat.id, 'Hello')
+})
 
-bot.on('message', (msg) => {
-
-    const chatId = msg.chat.id;
-
-    bot.onText(/\/start/, (msg) => {
-        bot.sendMessage(chatId, 'Olá, seja bem vindo! Esse é o bot de aviso de entrega mais eficiente do Brasil! Em quê podemos lhe ajudar?')
-    })
-    if(msg == 'oi');{
-        bot.sendMessage(chatId, "Olá, senhor(a)!")
-    }
-});
+bot.launch();

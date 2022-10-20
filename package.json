@@ -3,7 +3,8 @@
     "dialogflow": "^1.2.0",
     "dotenv": "^16.0.3",
     "node-telegram-bot-api": "^0.59.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "telegraf": "^4.10.0"
   },
   "name": "bot_telegram",
   "version": "1.0.0",
