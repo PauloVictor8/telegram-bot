@@ -5,7 +5,7 @@ const TOKEN = process.env.BOT; // Token do BOT
 
 const bot = new TelegramBot(TOKEN, {polling: true});
 
-bot.on('message', async (msg) => {
+bot.on('message', (msg) => {
 
     const chatId = msg.chat.id;
 
